@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -73,6 +73,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="_static/logo.svg" class="logo" alt="logo">
       
       
@@ -84,7 +88,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   Getting started
  </span>
@@ -101,7 +105,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Contributing
  </span>
@@ -118,7 +122,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   External links
  </span>
@@ -303,7 +307,7 @@
         
               <div>
                 
-  <div class="section" id="api-reference">
+  <div class="tex2jax_ignore mathjax_ignore section" id="api-reference">
 <h1>API reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
 <p>This page lists the functions that are common to each of the
 <a class="reference internal" href="api_comparison.html"><span class="doc std std-doc">provided APIs</span></a>.
@@ -330,7 +334,7 @@ but we’ll try to group functions in a reasonably logical manner.</p>
 <td><p>Identify if an H3 cell is a pentagon.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#h3.h3_is_res_class_III" title="h3.h3_is_res_class_III"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h3_is_res_class_III</span></code></a>(h)</p></td>
-<td><p>Determine if cell has orientation “Class II” or “Class III”.</p></td>
+<td><p>Determine if cell has orientation &quot;Class II&quot; or &quot;Class III&quot;.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#h3.h3_is_res_class_iii" title="h3.h3_is_res_class_iii"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h3_is_res_class_iii</span></code></a>(h)</p></td>
 <td><p>Alias for <cite>h3_is_res_class_III</cite>.</p></td>
@@ -412,7 +416,7 @@ but we’ll try to group functions in a reasonably logical manner.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#h3.h3_to_geo_boundary" title="h3.h3_to_geo_boundary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h3_to_geo_boundary</span></code></a>(h[, geo_json])</p></td>
 <td><p>Return tuple of lat/lng pairs describing the cell boundary.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_h3_unidirectional_edge_boundary</span></code>(edge[, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_h3_unidirectional_edge_boundary</span></code>(edge[, ...])</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#h3.polyfill" title="h3.polyfill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polyfill</span></code></a>(geojson, res[, geo_json_conformant])</p></td>
@@ -421,7 +425,7 @@ but we’ll try to group functions in a reasonably logical manner.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">polyfill_geojson</span></code>(geojson, res)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">polyfill_polygon</span></code>(outer, res[, holes, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">polyfill_polygon</span></code>(outer, res[, holes, ...])</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#h3.h3_set_to_multi_polygon" title="h3.h3_set_to_multi_polygon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">h3_set_to_multi_polygon</span></code></a>(hexes[, geo_json])</p></td>
@@ -462,7 +466,7 @@ but we’ll try to group functions in a reasonably logical manner.</p>
 <td><p>Alias for <cite>k_ring</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#h3.hex_range_distances" title="h3.hex_range_distances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hex_range_distances</span></code></a>(h, K)</p></td>
-<td><p>Ordered list of the “hollow” rings around <code class="docutils literal notranslate"><span class="pre">h</span></code>, up to and including distance <code class="docutils literal notranslate"><span class="pre">K</span></code>.</p></td>
+<td><p>Ordered list of the &quot;hollow&quot; rings around <code class="docutils literal notranslate"><span class="pre">h</span></code>, up to and including distance <code class="docutils literal notranslate"><span class="pre">K</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#h3.hex_ranges" title="h3.hex_ranges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hex_ranges</span></code></a>(hexes, K)</p></td>
 <td><p>Returns the dictionary <code class="docutils literal notranslate"><span class="pre">{h:</span> <span class="pre">hex_range_distances(h,</span> <span class="pre">K)</span> <span class="pre">for</span> <span class="pre">h</span> <span class="pre">in</span> <span class="pre">hexes}</span></code></p></td>
@@ -541,33 +545,33 @@ but we’ll try to group functions in a reasonably logical manner.</p>
 <div class="section" id="module-h3">
 <span id="definitions"></span><h2>Definitions<a class="headerlink" href="#module-h3" title="Permalink to this headline">¶</a></h2>
 <dl class="py exception">
-<dt id="h3.H3CellError">
-<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">H3CellError</span></code><a class="headerlink" href="#h3.H3CellError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.H3CellError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">H3CellError</span></span><a class="headerlink" href="#h3.H3CellError" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py exception">
-<dt id="h3.H3DistanceError">
-<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">H3DistanceError</span></code><a class="headerlink" href="#h3.H3DistanceError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.H3DistanceError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">H3DistanceError</span></span><a class="headerlink" href="#h3.H3DistanceError" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py exception">
-<dt id="h3.H3EdgeError">
-<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">H3EdgeError</span></code><a class="headerlink" href="#h3.H3EdgeError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.H3EdgeError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">H3EdgeError</span></span><a class="headerlink" href="#h3.H3EdgeError" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py exception">
-<dt id="h3.H3ResolutionError">
-<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">H3ResolutionError</span></code><a class="headerlink" href="#h3.H3ResolutionError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.H3ResolutionError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">H3ResolutionError</span></span><a class="headerlink" href="#h3.H3ResolutionError" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py exception">
-<dt id="h3.H3ValueError">
-<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">H3ValueError</span></code><a class="headerlink" href="#h3.H3ValueError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.H3ValueError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">H3ValueError</span></span><a class="headerlink" href="#h3.H3ValueError" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="h3.cell_area">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">cell_area</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km^2'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.cell_area" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.cell_area">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">cell_area</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km^2'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.cell_area" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the spherical surface area of a specific H3 cell.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -591,8 +595,8 @@ The function uses the spherical distance calculation given by
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.compact">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">compact</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hexes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.compact" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.compact">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">compact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hexes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.compact" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compact a collection of H3 cells by combining
 smaller cells into larger cells, if all child cells
 are present.</p>
@@ -610,8 +614,8 @@ are present.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.edge_length">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">edge_length</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.edge_length" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.edge_length">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">edge_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.edge_length" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the average <em>hexagon</em> edge length
 for the given resolution.</p>
 <p>This average <em>excludes</em> pentagons.</p>
@@ -626,8 +630,8 @@ for the given resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.exact_edge_length">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">exact_edge_length</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.exact_edge_length" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.exact_edge_length">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">exact_edge_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.exact_edge_length" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the spherical length of a specific H3 edge.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -649,8 +653,8 @@ for the given resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.experimental_h3_to_local_ij">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">experimental_h3_to_local_ij</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.experimental_h3_to_local_ij" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.experimental_h3_to_local_ij">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">experimental_h3_to_local_ij</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.experimental_h3_to_local_ij" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return local (i,j) coordinates of cell <code class="docutils literal notranslate"><span class="pre">h</span></code> in relation to <code class="docutils literal notranslate"><span class="pre">origin</span></code> cell</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -678,8 +682,8 @@ you the property of (0, 0) being the <code class="docutils literal notranslate">
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.experimental_local_ij_to_h3">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">experimental_local_ij_to_h3</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.experimental_local_ij_to_h3" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.experimental_local_ij_to_h3">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">experimental_local_ij_to_h3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.experimental_local_ij_to_h3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return cell at local (i,j) position relative to the <code class="docutils literal notranslate"><span class="pre">origin</span></code> cell.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -707,8 +711,8 @@ you the property of (0, 0) being the <code class="docutils literal notranslate">
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.geo_to_h3">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">geo_to_h3</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.geo_to_h3" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.geo_to_h3">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">geo_to_h3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.geo_to_h3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the cell containing the (lat, lng) point
 for a given resolution.</p>
 <dl class="field-list simple">
@@ -722,8 +726,8 @@ for a given resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.get_destination_h3_index_from_unidirectional_edge">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">get_destination_h3_index_from_unidirectional_edge</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_destination_h3_index_from_unidirectional_edge" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.get_destination_h3_index_from_unidirectional_edge">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">get_destination_h3_index_from_unidirectional_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_destination_h3_index_from_unidirectional_edge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Destination cell from an H3 directed edge.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -739,8 +743,8 @@ for a given resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.get_h3_indexes_from_unidirectional_edge">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">get_h3_indexes_from_unidirectional_edge</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_h3_indexes_from_unidirectional_edge" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.get_h3_indexes_from_unidirectional_edge">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">get_h3_indexes_from_unidirectional_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_h3_indexes_from_unidirectional_edge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return (origin, destination) tuple from H3 directed edge</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -757,8 +761,8 @@ for a given resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.get_h3_unidirectional_edge">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">get_h3_unidirectional_edge</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_h3_unidirectional_edge" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.get_h3_unidirectional_edge">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">get_h3_unidirectional_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_h3_unidirectional_edge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an H3 Index denoting a unidirectional edge.</p>
 <p>The edge is constructed from neighboring cells <code class="docutils literal notranslate"><span class="pre">origin</span></code> and
 <code class="docutils literal notranslate"><span class="pre">destination</span></code>.</p>
@@ -782,8 +786,8 @@ for a given resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.get_h3_unidirectional_edges_from_hexagon">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">get_h3_unidirectional_edges_from_hexagon</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_h3_unidirectional_edges_from_hexagon" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.get_h3_unidirectional_edges_from_hexagon">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">get_h3_unidirectional_edges_from_hexagon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_h3_unidirectional_edges_from_hexagon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return all directed edges starting from <code class="docutils literal notranslate"><span class="pre">origin</span></code> cell.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -799,8 +803,8 @@ for a given resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.get_origin_h3_index_from_unidirectional_edge">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">get_origin_h3_index_from_unidirectional_edge</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_origin_h3_index_from_unidirectional_edge" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.get_origin_h3_index_from_unidirectional_edge">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">get_origin_h3_index_from_unidirectional_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_origin_h3_index_from_unidirectional_edge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Origin cell from an H3 directed edge.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -816,8 +820,8 @@ for a given resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.get_pentagon_indexes">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">get_pentagon_indexes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_pentagon_indexes" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.get_pentagon_indexes">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">get_pentagon_indexes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_pentagon_indexes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return all pentagons at a given resolution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -833,8 +837,8 @@ for a given resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.get_res0_indexes">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">get_res0_indexes</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_res0_indexes" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.get_res0_indexes">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">get_res0_indexes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#h3.get_res0_indexes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return all cells at resolution 0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -850,8 +854,8 @@ for a given resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_distance">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_distance</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_distance" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_distance">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_distance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the H3 distance between two cells.</p>
 <p>The H3 distance is defined as the length of the shortest
 path between the cells in the graph formed by connecting
@@ -875,8 +879,8 @@ cells are too far apart to compute the distance.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_get_base_cell">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_get_base_cell</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_get_base_cell" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_get_base_cell">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_get_base_cell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_get_base_cell" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the base cell <em>number</em> (<code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">121</span></code>) of the given cell.</p>
 <p>The base cell <em>number</em> and the H3Index are two different representations
 of the same cell: the parent cell of resolution <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
@@ -897,8 +901,8 @@ H3Index.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_get_faces">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_get_faces</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_get_faces" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_get_faces">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_get_faces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_get_faces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return icosahedron faces intersecting a given H3 cell.</p>
 <p>There are twenty possible faces, ranging from 0–19.</p>
 <p>Note: Every interface returns a Python <code class="docutils literal notranslate"><span class="pre">set</span></code> of <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
@@ -916,8 +920,8 @@ H3Index.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_get_resolution">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_get_resolution</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_get_resolution" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_get_resolution">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_get_resolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_get_resolution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the resolution of an H3 cell.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -933,8 +937,8 @@ H3Index.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_indexes_are_neighbors">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_indexes_are_neighbors</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_indexes_are_neighbors" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_indexes_are_neighbors">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_indexes_are_neighbors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_indexes_are_neighbors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">h1</span></code> and <code class="docutils literal notranslate"><span class="pre">h2</span></code> are neighboring cells.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -953,8 +957,8 @@ H3Index.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_is_pentagon">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_is_pentagon</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_is_pentagon" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_is_pentagon">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_is_pentagon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_is_pentagon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identify if an H3 cell is a pentagon.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -973,8 +977,8 @@ Will return <code class="docutils literal notranslate"><span class="pre">False</
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_is_res_class_III">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_is_res_class_III</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_is_res_class_III" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_is_res_class_III">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_is_res_class_III</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_is_res_class_III" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine if cell has orientation “Class II” or “Class III”.</p>
 <p>The orientation of pentagons/hexagons on the icosahedron can be one
 of two types: “Class II” or “Class III”.</p>
@@ -1001,14 +1005,14 @@ alternates between resolutions.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_is_res_class_iii">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_is_res_class_iii</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_is_res_class_iii" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_is_res_class_iii">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_is_res_class_iii</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_is_res_class_iii" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for <cite>h3_is_res_class_III</cite>.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_is_valid">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_is_valid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_is_valid" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_is_valid">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_is_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_is_valid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Validates an H3 cell (hexagon or pentagon).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1021,8 +1025,8 @@ alternates between resolutions.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_line">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_line</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_line" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_line">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_line" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the ordered collection of cells denoting a
 minimum-length non-unique path between cells.</p>
 <dl class="field-list simple">
@@ -1042,8 +1046,8 @@ minimum-length non-unique path between cells.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_set_to_multi_polygon">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_set_to_multi_polygon</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hexes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geo_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_set_to_multi_polygon" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_set_to_multi_polygon">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_set_to_multi_polygon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hexes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geo_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_set_to_multi_polygon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get GeoJSON-like MultiPolygon describing the outline of the area
 covered by a set of H3 cells.</p>
 <dl class="field-list simple">
@@ -1070,8 +1074,8 @@ Each geo sequence is a list of lat/lng or lng/lat pairs.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_to_center_child">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_to_center_child</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_to_center_child" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_to_center_child">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_to_center_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_to_center_child" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the center child of a cell at some finer resolution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1091,8 +1095,8 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_to_children">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_to_children</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_to_children" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_to_children">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_to_children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_to_children" title="Permalink to this definition">¶</a></dt>
 <dd><p>Children of a hexagon.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1112,8 +1116,8 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_to_geo">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_to_geo</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_to_geo" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_to_geo">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_to_geo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_to_geo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the center point of an H3 cell as a lat/lng pair.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1130,8 +1134,8 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_to_geo_boundary">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_to_geo_boundary</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geo_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_to_geo_boundary" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_to_geo_boundary">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_to_geo_boundary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geo_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_to_geo_boundary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return tuple of lat/lng pairs describing the cell boundary.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1154,8 +1158,8 @@ pair distinct from the first.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_to_parent">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_to_parent</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_to_parent" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_to_parent">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_to_parent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_to_parent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the parent of a cell.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1175,8 +1179,8 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_to_string">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_to_string</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_to_string" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_to_string">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_to_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts an H3 64-bit integer index to a hexadecimal string.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1192,8 +1196,8 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.h3_unidirectional_edge_is_valid">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">h3_unidirectional_edge_is_valid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edge</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_unidirectional_edge_is_valid" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.h3_unidirectional_edge_is_valid">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">h3_unidirectional_edge_is_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">edge</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.h3_unidirectional_edge_is_valid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Validates an H3 unidirectional edge.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1206,8 +1210,8 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.hex_area">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">hex_area</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km^2'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.hex_area" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.hex_area">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">hex_area</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km^2'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.hex_area" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the average area of an H3 <em>hexagon</em>
 for the given resolution.</p>
 <p>This average <em>excludes</em> pentagons.</p>
@@ -1222,8 +1226,8 @@ for the given resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.hex_range">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">hex_range</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.hex_range" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.hex_range">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">hex_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.hex_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for <cite>k_ring</cite>.
 “Filled-in” disk.</p>
 <p class="rubric">Notes</p>
@@ -1231,8 +1235,8 @@ for the given resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.hex_range_distances">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">hex_range_distances</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.hex_range_distances" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.hex_range_distances">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">hex_range_distances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.hex_range_distances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ordered list of the “hollow” rings around <code class="docutils literal notranslate"><span class="pre">h</span></code>,
 up to and including distance <code class="docutils literal notranslate"><span class="pre">K</span></code>.</p>
 <dl class="field-list simple">
@@ -1252,8 +1256,8 @@ up to and including distance <code class="docutils literal notranslate"><span cl
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.hex_ranges">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">hex_ranges</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hexes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.hex_ranges" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.hex_ranges">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">hex_ranges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hexes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.hex_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the dictionary <code class="docutils literal notranslate"><span class="pre">{h:</span> <span class="pre">hex_range_distances(h,</span> <span class="pre">K)</span> <span class="pre">for</span> <span class="pre">h</span> <span class="pre">in</span> <span class="pre">hexes}</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1266,8 +1270,8 @@ up to and including distance <code class="docutils literal notranslate"><span cl
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.hex_ring">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">hex_ring</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.hex_ring" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.hex_ring">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">hex_ring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.hex_ring" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return unordered set of cells with H3 distance <code class="docutils literal notranslate"><span class="pre">==</span> <span class="pre">k</span></code> from <code class="docutils literal notranslate"><span class="pre">h</span></code>.
 That is, the “hollow” ring.</p>
 <dl class="field-list simple">
@@ -1287,8 +1291,8 @@ That is, the “hollow” ring.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.k_ring">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">k_ring</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.k_ring" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.k_ring">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">k_ring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.k_ring" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return unordered set of cells with H3 distance <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">k</span></code> from <code class="docutils literal notranslate"><span class="pre">h</span></code>.
 That is, the “filled-in” disk.</p>
 <dl class="field-list simple">
@@ -1308,14 +1312,14 @@ That is, the “filled-in” disk.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.k_ring_distances">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">k_ring_distances</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.k_ring_distances" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.k_ring_distances">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">k_ring_distances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.k_ring_distances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for <cite>hex_range_distances</cite>.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.num_hexagons">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">num_hexagons</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.num_hexagons" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.num_hexagons">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">num_hexagons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.num_hexagons" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the total number of <em>cells</em> (hexagons and pentagons)
 for the given resolution.</p>
 <dl class="field-list simple">
@@ -1329,8 +1333,8 @@ for the given resolution.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.point_dist">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">point_dist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.point_dist" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.point_dist">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">point_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.point_dist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the spherical distance between two (lat, lng) points.</p>
 <p>todo: do we handle lat/lng points consistently in the api? what
 about (lat1, lng1, lat2, lng2) as the input? How will this work
@@ -1353,8 +1357,8 @@ for vectorized versions?</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.polyfill">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">polyfill</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geojson</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geo_json_conformant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.polyfill" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.polyfill">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">polyfill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geojson</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geo_json_conformant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.polyfill" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get set of hexagons whose <em>centers</em> are contained within
 a GeoJSON-style polygon.</p>
 <dl class="field-list simple">
@@ -1389,8 +1393,8 @@ with the last not needing to match the first.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.string_to_h3">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">string_to_h3</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.string_to_h3" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.string_to_h3">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">string_to_h3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.string_to_h3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts a hexadecimal string to an H3 64-bit integer index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1406,8 +1410,8 @@ with the last not needing to match the first.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.uncompact">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">uncompact</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hexes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.uncompact" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.uncompact">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">uncompact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hexes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#h3.uncompact" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reverse the <cite>compact</cite> operation.</p>
 <p>Return a collection of H3 cells, all of resolution <code class="docutils literal notranslate"><span class="pre">res</span></code>.</p>
 <dl class="field-list simple">
@@ -1434,8 +1438,8 @@ with the last not needing to match the first.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="h3.versions">
-<code class="sig-prename descclassname"><span class="pre">h3.</span></code><code class="sig-name descname"><span class="pre">versions</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#h3.versions" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="h3.versions">
+<span class="sig-prename descclassname"><span class="pre">h3.</span></span><span class="sig-name descname"><span class="pre">versions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#h3.versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Version numbers for the Python (wrapper) and C (wrapped) libraries.</p>
 <p>Versions are output as strings of the form <code class="docutils literal notranslate"><span class="pre">'X.Y.Z'</span></code>.
 C and Python should match on <code class="docutils literal notranslate"><span class="pre">X</span></code> (major) and <code class="docutils literal notranslate"><span class="pre">Y</span></code> (minor),
@@ -1505,7 +1509,7 @@ but may differ on <code class="docutils literal notranslate"><span class="pre">Z
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
