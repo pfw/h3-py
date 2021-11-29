@@ -973,4 +973,17 @@ def _api_functions(
             unit=unit
         )
 
+    def h3_components(h):
+        """
+
+        Parameters
+        ----------
+        h : H3Cell
+
+        Returns
+        -------
+        tuple of component ints
+        """
+        return _cy.get_components(_in_scalar(h))
+
     _globals.update(locals())

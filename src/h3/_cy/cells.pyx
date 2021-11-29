@@ -373,3 +373,23 @@ cpdef H3int experimental_local_ij_to_h3(H3int origin, int i, int j) except 0:
         raise H3ValueError(s)
 
     return out
+
+
+cpdef get_components(H3int h):
+    check_cell(h)
+
+    n = h3lib.getComponentCount(h)
+
+    cdef int* ptr = <int*> stdlib.calloc(n, sizeof(int))
+    if (n > 0) and (not ptr):
+        raise MemoryError()
+
+    h3lib.getComponents(h, ptr)
+
+    components = <int[:n]> ptr
+    components = tuple(components)
+    stdlib.free(ptr)
+
+    return components
+
+

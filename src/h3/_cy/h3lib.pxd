@@ -166,3 +166,7 @@ cdef extern from "h3api.h":
     double pointDistRads(const GeoCoord *a, const GeoCoord *b) nogil
     double pointDistKm(const GeoCoord *a, const GeoCoord *b) nogil
     double pointDistM(const GeoCoord *a, const GeoCoord *b) nogil
+
+    int getComponentCount(H3Index h3)
+    void getComponents(H3Index h3, int *out) nogil
+
